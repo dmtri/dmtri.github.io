@@ -5,18 +5,22 @@
   <title>Code jokey</title>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
 </head>
 
 <body>
-  <div class="easycv-template resume-standard container mx-auto max-w-screen-lg font-Noto-SourceHanSans"
-    id="template-standard-theme-blue">
-    <main class="p-8 bg-white text-zinc-800">
+  <div class="container mx-auto max-w-screen-lg">
+    <div class="cs-progress-bar">
+      <div style="width: 10%" class="bars"></div>
+    </div>
+    <hr class="cs-hr" />
+    <main class="p-8">
       <header class="resume-header">
         <div class="title-cols relative">
           <div class="title-avatar text-center md:mr-8 md:absolute md:top-0 md:right-0"><!--v-if--></div>
           <div class="basic-info text-center md:mx-auto">
             <div class="md:flex md:justify-center md:items-center">
-              <h1 class="text-3xl font-semibold mb-2 mr-2">John Doe</h1>
+              <h1 class="text-3xl font-semibold mb-2 mr-2">John Đâu</h1>
               <h2 class="text-xl mb-2">Code jockey</h2>
             </div>
             <ul class="link-list text-left flex justify-center mb-2 flex-wrap">
@@ -30,6 +34,70 @@
             </ul>
             <ul class="link-list text-left flex justify-center first-line:text-left flex-wrap"></ul>
           </div>
+          <hr class="cs-hr" />
+          <button class="cs-btn">Button</button>
+          <button disabled class="cs-btn">Disabled</button>
+          <hr class="cs-hr" />
+          <input class="cs-input" id="input" type="input" />
+          <label class="cs-input__label" for="input">First name</label>
+
+          <br />
+          <br />
+
+          <input type="text" value="John Doe" class="cs-input" />
+          <input type="text" disabled value="disabled" class="cs-input" />
+          <hr class="cs-hr" />
+
+          <fieldset class="cs-fieldset">
+            <legend>What is your favorite wild animal?</legend>
+            <div class="radio-wrapper">
+              <input type="radio" name="animal" id="elephant" />
+              <label for="elephant">Elephant</label>
+            </div>
+            <div class="radio-wrapper">
+              <input type="radio" name="animal" id="monkey" />
+              <label for="monkey">Monkey</label>
+            </div>
+            <div class="radio-wrapper">
+              <input type="radio" name="animal" id="cheetah" />
+              <label for="cheetah">Cheetah</label>
+            </div>
+            <div class="radio-wrapper">
+              <input type="radio" name="animal" id="giraffe" />
+              <label for="giraffe">Giraffe</label>
+            </div>
+          </fieldset>
+
+          <section>
+            <button type="button" class="cs-btn" onclick="document.querySelector('.cs-dialog').showModal();">
+              Open dialog
+            </button>
+            <dialog class="cs-dialog">
+              <form method="dialog">
+                <div class="heading">
+                  <div class="wrapper">
+                    <div class="icon"></div>
+                    <p class="text">Options</p>
+                  </div>
+                  <button class="cs-btn close"></button>
+                </div>
+                <div class="content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio ad suscipit aut asperiores laudantium error amet
+                  sapiente et tempora numquam voluptates, velit sint quos
+                  exercitationem unde obcaecati deleniti maiores officia natus
+                  ipsa rem fuga commodi esse. Sunt repellendus ipsa illo a
+                  accusantium consequuntur nihil dicta necessitatibus porro,
+                  saepe, sed repudiandae!
+                </div>
+                <menu class="footer-btns">
+                  <button class="cs-btn">OK</button>
+                  <button class="cs-btn">Cancel</button>
+                  <button class="cs-btn">Apply</button>
+                </menu>
+              </form>
+            </dialog>
+          </section>
         </div>
       </header>
       <div class="resume-content">
@@ -39,6 +107,27 @@
       </div>
     </main>
     <div class="line-container"></div>
+
+    <div class="cs-tabs">
+      <input class="radiotab" name="tabs" tabindex="1" type="radio" id="tabone" checked="checked" />
+      <label class="label" for="tabone">Tab One</label>
+      <div class="panel" tabindex="1">
+        <h2>Tab One Content</h2>
+        <p>Tab content...</p>
+      </div>
+      <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabtwo" />
+      <label class="label" for="tabtwo">Tab Two</label>
+      <div class="panel" tabindex="1">
+        <h2>Tab Two Content</h2>
+        <p>Tab content...</p>
+      </div>
+      <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabthree" />
+      <label class="label" for="tabthree">Tab Three</label>
+      <div class="panel" tabindex="1">
+        <h2>Tab Three Content</h2>
+        <p>Tab content...</p>
+      </div>
+    </div>
   </div>
 </body>
 
